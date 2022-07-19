@@ -1,0 +1,60 @@
+.eventsList {
+  width: 700px;
+  margin: auto;
+  padding: 40px 0px 0px 0px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 700px;
+  height: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 26px 20px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(62, 118, 244, 0.14);
+}
+
+.listItem:hover {
+  background-color: rgb(250, 248, 250);
+  overflow: visible;
+  white-space: normal;
+}
+
+.listItemContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+}
+
+.loadingItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 150px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(62, 118, 244, 0.14);
+}
+
+.loading {
+  height: 70px;
+  width: 70px;
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
