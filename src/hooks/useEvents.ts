@@ -30,7 +30,8 @@ const useEvents = () => {
       if (rawEventLogs && client && provider) {
         try {
           const combinedData = rawEventLogs.map(async (e) => {
-            let blockTime = await getDate(e.blockHash, provider);
+            let blockTime =
+              e.blockHash && (await getDate(e.blockHash, provider));
             const obj = await {
               unparsed: e,
               parsed: client.interface.parseLog(e),
